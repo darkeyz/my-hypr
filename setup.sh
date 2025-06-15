@@ -29,3 +29,7 @@ sudo pacman -S --needed rofi-wayland && sudo cp -r rofi/themes/* /usr/share/rofi
 # waybar
 # cp -r /etc/xdg/waybar/* ~/.config/waybar
 sudo pacman -S --needed waybar ttf-font-awesome && cp -r waybar/* ~/.config/waybar/
+
+
+# Asus
+yay -S --needed asusctl
