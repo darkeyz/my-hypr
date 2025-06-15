@@ -1,0 +1,125 @@
+@define-color foreground	#f8f8f2;
+@define-color background	rgba(40, 42, 54, 0.5);
+@define-color success	#50fa7b;
+@define-color danger	#ff5555;
+@define-color accent	rgba(255, 255, 255, 0.8);
+@define-color warning	#f1fa8c;
+@define-color neutral #ffffff;
+
+
+@keyframes blink {
+    to {
+        background-color: @white;
+        color: @black;
+    }
+}
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "monospace";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+	  color: @neutral;
+}
+
+#workspaces {
+    background: @background;
+    opacity: 1;
+    transition: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+#workspaces button, #workspaces button.persistent {
+    background: transparent;
+    color: @neutral;
+    transition: none;
+}
+
+#workspaces button.active {
+    background: @accent;
+    color: @background;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: rgba(40, 42, 54, 0.2);
+    border-radius: 5px;
+}
+
+tooltip {
+    background: @background;
+    opacity: 0.95;
+    border-radius: 5px;
+}
+
+tooltip label{
+    color: @neutral;
+}
+
+#custom-rofi,
+#cpu,
+#disk,
+#memory,
+#clock,
+#battery,
+#network,
+#temperature,
+#language {
+    background: @background;
+    opacity: 1;
+    padding: 0px 5px;
+    margin: 2px 0px 2px 0px;
+}
+
+#disk.critical,
+#temperature.critical  {
+    background-color: @danger;
+}
+
+#disk.warning,
+#temperature.warning {
+    background-color: @warning;
+}
+
+#battery {
+    color: @success;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#battery.discharging {
+    color: @accent;
+}
+
+#battery.warning:not(.charging) {
+    background: @warning;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @danger;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-rofi {
+    color: @accent;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#clock {
+    border-radius: 0px 5px 5px 0px;
+}

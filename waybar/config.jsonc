@@ -1,0 +1,95 @@
+{
+   "layer":"top",
+   "position":"top",
+   "mod":"dock",
+   "exclusive":true,
+   "passthrough":false,
+   "gtk-layer-shell":true,
+   "height":36,
+   "margin-right":5,
+   "margin-left":5,
+   "modules-left":[
+      "custom/rofi",
+      "clock"
+   ],
+   "modules-center":[
+      "hyprland/workspaces"
+   ],
+   "modules-right":[
+      "battery",
+      "cpu",
+      "memory",
+      "disk",
+      "temperature",
+      "network",
+      "hyprland/language"
+   ],
+   "custom/rofi":{
+      "format":"",
+      "on-click":"rofi -show drun",
+      "tooltip":false
+   },
+   "hyprland/workspaces":{
+      "on-click":"activate",
+      "disable-scroll":true,
+      "all-outputs":true,
+      "show-special":true,
+      "persistent-workspaces":{
+         "*":[
+            1,
+            2,
+            3,
+            4
+         ]
+      }
+   },
+   "cpu":{
+      "interval":10,
+      "format":"",
+      "max-length":10,
+   },
+   "memory":{
+      "interval":30,
+      "format":"",
+      "max-length":10,
+      "tooltip":true,
+      "tooltip-format":"Memory - {used:0.1f}GB used"
+   },
+   "disk":{
+      "interval":600,
+      "format":"",
+      "path":"/",
+      "tooltip":true,
+      "tooltip-format":"HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+      "states":{
+         "warning":85,
+         "critical":90
+      }
+   },
+   "battery":{
+      "states":{
+         "good":95,
+         "warning":30,
+         "critical":20
+      },
+      "format":"{icon}",
+      "format-charging":" {capacity}%",
+      "format-plugged":" {capacity}%",
+      "states":{
+         "warning":20,
+         "critical":10
+      },
+      "format-icons":[
+         "",
+         "",
+         "",
+         "",
+         "",
+      ]
+   },
+   "hyprland/language":{
+      "format":"{}",
+      "on-click":"hyprctl switchxkblayout at-translated-set-2-keyboard next",
+      "format-en":"EN"
+   }
+}

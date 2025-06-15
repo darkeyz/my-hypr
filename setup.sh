@@ -27,4 +27,5 @@ sudo pacman -S --needed xdg-desktop-portal-hyprland qt5-wayland qt6-wayland
 sudo pacman -S --needed rofi-wayland && sudo cp -r rofi/themes/* /usr/share/rofi/themes/
 
 # waybar
-sudo pacman -S --needed waybar && cp -r /etc/xdg/waybar ~/.config/waybar
+# cp -r /etc/xdg/waybar/* ~/.config/waybar
+sudo pacman -S --needed waybar ttf-font-awesome && cp -r waybar/* ~/.config/waybar/
