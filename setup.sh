@@ -1,12 +1,11 @@
 #!/bin/sh
 
 # start in ~
-cd ~
 sudo pacman -Sy
 
 # yay
 # enable multilib in /etc/pacman.conf
-# sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd ~ && rm -rf yay    
+# sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && rm -rf yay    
 
 # Browser(brave)
 # Set "preferred Ozone platform" to wayland in "brave://flags"
@@ -24,5 +23,8 @@ sudo pacman -S --needed  bluez bluez-utils bluetui && systemctl enable --now blu
 # Critical for hyprland
 sudo pacman -S --needed xdg-desktop-portal-hyprland qt5-wayland qt6-wayland	
 
+# Rofi
+sudo pacman -S --needed rofi-wayland && sudo cp -r rofi/themes/* /usr/share/rofi/themes/
+
 # waybar
-sudo pacman -S --needed waybar 
+sudo pacman -S --needed waybar && cp -r /etc/xdg/waybar ~/.config/waybar
