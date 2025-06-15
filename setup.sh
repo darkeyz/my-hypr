@@ -21,7 +21,7 @@ sudo pacman -S --needed networkmanager && sudo systemctl enable --now NetworkMan
 sudo pacman -S --needed  bluez bluez-utils bluetui && systemctl enable --now bluetooth.service  
 
 # Critical for hyprland
-sudo pacman -S --needed xdg-desktop-portal-hyprland qt5-wayland qt6-wayland	
+sudo pacman -S --needed pipewire wireplumber xdg-desktop-portal-hyprland qt5-wayland qt6-wayland	
 
 # Rofi
 sudo pacman -S --needed rofi-wayland && sudo cp -r rofi/themes/* /usr/share/rofi/themes/
