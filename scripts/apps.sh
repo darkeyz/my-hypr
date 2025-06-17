@@ -12,7 +12,7 @@ sudo pacman -S --needed yazi
 
 
 # Terminal 
-sudo pacman -S --needed kitty 
+sudo pacman -S --needed kitty && cp kitty.conf ~/.config/kitty/
 
 # Lutris
 sudo pacman -S --needed lutris

@@ -22,7 +22,8 @@
       "disk",
       "temperature",
       "network",
-      "hyprland/language"
+      "hyprland/language",
+      "tray"
    ],
    "custom/rofi":{
       "format":"",
@@ -86,6 +87,18 @@
          "",
          "",
       ]
+   },
+   "network": {
+        "on-click": "nm-applet",
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
    },
    "hyprland/language":{
       "format":"{}",

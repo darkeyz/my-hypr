@@ -11,7 +11,7 @@ sudo pacman -Sy
 sudo pacman -S --needed brightnessctl 
 
 # WIFI
-sudo pacman -S --needed networkmanager && sudo systemctl enable --now NetworkManager.service
+sudo pacman -S --needed networkmanager network-manager-applet && sudo systemctl enable --now NetworkManager.service
 
 # Bluetooth
 sudo pacman -S --needed  bluez bluez-utils bluetui && systemctl enable --now bluetooth.service  
@@ -30,9 +30,11 @@ sudo pacman -S --needed waybar ttf-font-awesome && cp -r waybar/* ~/.config/wayb
 sudo pacman -S --needed hyprlock && cp hyprlock.conf avatar.png wallpapers/wallpaper-1.jpg ~/.config/hypr/
 
 # sddm
-# test with sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sequoia 
-# change theme in /usr/lib/sddm/sddm.conf.d/default.conf to sequoia
-yay -S --needed sddm && sudo cp -r sequoia /usr/share/sddm/themes/ 
+# test with sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/greenleaf 
+yay -S --needed sddm && sudo cp -r sddm/greenleaf /usr/share/sddm/themes/ && sudo cp sddm/sddm.conf /etc/
+
+# hyprpaper
+sudo pacman -S --needed hyprpaper && sudo cp hyprpaper.conf ~/.config/hypr/
 
 # swaync
 sudo pacman -S --needed swaync libnotify

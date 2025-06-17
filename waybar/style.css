@@ -20,8 +20,6 @@
     font-family: "monospace";
     font-weight: bold;
     font-size: 12px;
-    padding: 1px 2px;
-    margin: 0px 2px;
 }
 
 window#waybar {
@@ -40,6 +38,8 @@ window#waybar {
     background: transparent;
     color: @neutral;
     transition: none;
+    padding: 0px 4px;
+    margin: 5px 5px;
 }
 
 #workspaces button.active {
