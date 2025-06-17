@@ -20,19 +20,19 @@
     font-family: "monospace";
     font-weight: bold;
     font-size: 12px;
-    min-height: 0;
+    padding: 1px 2px;
+    margin: 0px 2px;
 }
 
 window#waybar {
     background: transparent;
-	  color: @neutral;
+    color: @neutral;
 }
 
 #workspaces {
     background: @background;
     opacity: 1;
     transition: none;
-    padding: 5px 5px;
     border-radius: 5px;
 }
 
@@ -49,8 +49,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: rgba(40, 42, 54, 0.2);
-    border-radius: 5px;
+  border: none;
 }
 
 tooltip {
