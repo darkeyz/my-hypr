@@ -21,6 +21,7 @@
       "memory",
       "disk",
       "temperature",
+      "bluetooth",
       "network",
       "hyprland/language",
       "tray"
@@ -88,17 +89,24 @@
          "",
       ]
    },
+   "bluetooth": {
+   	"on-click": "blueman-manager",
+        "format": "",
+        "format-off": "",
+        "format-on": "",
+        "tooltip": false
+   },
    "network": {
         "on-click": "nm-applet",
-        "format": "{ifname}",
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-disconnected": "",
-        "tooltip-format": "{ifname}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-        "tooltip-format-ethernet": "{ifname} ",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
+        "format": "",
+        // "format-wifi": "",
+        // "format-ethernet": "",
+        // "format-disconnected": "",
+        // "tooltip-format": "{ifname}",
+        // "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        // "tooltip-format-ethernet": "{ifname} ",
+        // "tooltip-format-disconnected": "Disconnected",
+        // "max-length": 50
    },
    "hyprland/language":{
       "format":"{}",
